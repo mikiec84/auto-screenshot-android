@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OneSkyScreenshotDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="text_view">TextView</string>
+    <string name="button">Button</string>
+    <string name="edit_text">EditText</string>
+    <string name="test_format">float = %1$.1f\nnew line = \nstring = %2$s\nint = %3$d\nboolean = %4$B</string>
+    
+	<!-- Array -->
+    <string-array name="array">
+        <item>Array Item 1</item>
+        <item>Array Item 2</item>
+        <item>Array Item 3</item>
+        <item>Array Item 4</item>
+    </string-array>
+    <string name="array">Array</string>
+
+</resources>
