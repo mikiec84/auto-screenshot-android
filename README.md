@@ -50,8 +50,8 @@ OneSkyScreenshotHelper.getHelper().setShowsCaptureStatus(false);
 ```
 
 The default position of the screenshot button is bottom right of the main window, you can adjust using ```Gravity```.
-```objective-c
-	OneSkyScreenshotHelper.getHelper().setCatpureButtonGravity(Gravity.TOP | Gravity.LEFT);
+```java
+OneSkyScreenshotHelper.getHelper().setCatpureButtonGravity(Gravity.TOP | Gravity.LEFT);
 ```
 
 Support
