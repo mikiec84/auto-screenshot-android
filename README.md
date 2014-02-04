@@ -23,17 +23,17 @@ Integration
 In your ```Application``` or main ```Activity``` subclass file, import the library:
 
 ```java
-	import com.oneskyapp.screenshot.OneSkyScreenshotHelper;
+import com.oneskyapp.screenshot.OneSkyScreenshotHelper;
 ```
 
 Add the following code in under ```onCreate()```:
 
 ```java
-	OneSkyScreenshotHelper.getHelper().setApiKey("ONESKY_API_KEY");
-	OneSkyScreenshotHelper.getHelper().setApiSecret("ONESKY_API_SECRET");
-	OneSkyScreenshotHelper.getHelper().setProjectId("ONESKY_PROJECT_ID");
+OneSkyScreenshotHelper.getHelper().setApiKey("ONESKY_API_KEY");
+OneSkyScreenshotHelper.getHelper().setApiSecret("ONESKY_API_SECRET");
+OneSkyScreenshotHelper.getHelper().setProjectId("ONESKY_PROJECT_ID");
 	
-	OneSkyScreenshotHelper.getHelper().startCapturing(this); // for Activity subclasses, use startCapturing(this.getApplication())
+OneSkyScreenshotHelper.getHelper().startCapturing(this); // for Activity subclasses, use startCapturing(this.getApplication())
 ```
 
 ```ONESKY_API_KEY```, ```ONESKY_API_SECRET``` can be found in **Site Settings** under **API Keys & Usage** on **OneSky Web Admin**. 
@@ -46,14 +46,14 @@ Advance Settings
 
 Turn off capture status ```Toast``` updates.
 ```java
-	OneSkyScreenshotHelper.getHelper().setShowsCaptureStatus(false);
+OneSkyScreenshotHelper.getHelper().setShowsCaptureStatus(false);
 ```
 
 The default position of the screenshot button is bottom right of the main window, you can adjust using ```Gravity```.
-```objective-c
-	OneSkyScreenshotHelper.getHelper().setCatpureButtonGravity(Gravity.TOP | Gravity.LEFT);
+```java
+OneSkyScreenshotHelper.getHelper().setCatpureButtonGravity(Gravity.TOP | Gravity.LEFT);
 ```
 
 Support
 -------
-http://onesky.com/
+http://support.oneskyapp.com/
