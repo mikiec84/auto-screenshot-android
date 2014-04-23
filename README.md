@@ -8,12 +8,53 @@ This library helps you easily upload screenshots of your app that contains local
 Installation
 ------------
 
-1. Locate ```OneSkyScreenshotHelper-vX.X.X.jar``` in the example project and drag it into the ```libs``` folder of your project.
+**1) Download .jar file ```libs``` folder**
+
+1. Locate ```OneSkyScreenshotHelper-vX.X.X.jar``` in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
 2. On Eclipse you are good to go.
 3. On Android Studio, locate the ```build.gradle``` file under your app's module and add the following:
+
 ```java
 	dependencies {
-		compile files('OneSkyScreenshotHelper-vX.X.X.jar')
+		compile files("OneSkyScreenshotHelper-vX.X.X.jar")
+	}
+```
+
+**2) Remote Maven Repository**
+
+Add the follow code to your ```pom.xml```
+```xml
+	<dependencies>
+		<dependency>
+			<groupId>com.oneskyapp</groupId>
+			<artifactId>screenshot</artifactId>
+			<version>0.5.1</version>
+        </dependency>
+	</dependencies>
+	
+	<repositories>
+		<repository>
+		    <id>screenshot</id>
+			<name>OneSkyScreenshotHelper</name>
+			<url>https://raw.github.com/onesky/auto-screenshot-android/mvn-repo/</url>
+		</repository>
+	</repositories>	
+```
+
+**3) Android Studio/Gradle**
+
+Add the follow code to your ```build.gradle```
+```java
+	repositories {
+		// mavenCentral()
+    	maven {
+        	url "https://raw.github.com/onesky/auto-screenshot-android/mvn-repo/"
+    	}
+	}
+	
+	dependencies {
+		// other dependencies.
+	    compile "com.oneskyapp:screenshot:0.5.1"
 	}
 ```
 
