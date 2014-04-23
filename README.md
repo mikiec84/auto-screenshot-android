@@ -3,7 +3,7 @@ OneSky Auto Screenshot Library for Android
 
 This library helps you easily upload screenshots of your app that contains localizable strings to your OneSky project.
 
-**NOTE:** This library is **not designed for distribution** on Google Play Store, remember to **remove** before submission.
+**NOTE:** This library is **not designed for distribution** on Google Play Store so remember to **remove** before submission.
 
 Installation
 ------------
