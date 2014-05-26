@@ -1,25 +1,28 @@
 package com.oneskyapp.screenshot.demo;
 
-import android.app.Activity;
-import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		if (getFragmentManager().findFragmentById(android.R.id.content) == null){
+		if (getSupportFragmentManager().findFragmentById(android.R.id.content) == null){
 			DemoFragment f = new DemoFragment();
-            getFragmentManager().beginTransaction().add(android.R.id.content, f).commit();
+			getSupportFragmentManager().beginTransaction().add(android.R.id.content, f).commit();
 		}		
 	}
 
@@ -61,6 +64,17 @@ public class MainActivity extends Activity {
 	        TextView nonLocalizableFormatView = (TextView)view.findViewById(R.id.non_localizable_format);
 	        String nonLocalizableFormat = "xfloat = %1$.1f\nnew line = \nxstring = %2$s\nint = %3$d\nboolean = %4$B";        
 	        nonLocalizableFormatView.setText(String.format(nonLocalizableFormat, 123f, "format", 12, false));
+	        
+	        mListView.setOnItemClickListener(new OnItemClickListener(){
+
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1,
+						int arg2, long arg3) {
+					
+					Intent i = new Intent(getActivity(), MainActivity.class);
+					startActivity(i);
+				}	        	
+	        });
 		}
 	}
 }
