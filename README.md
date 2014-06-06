@@ -10,13 +10,13 @@ Installation
 
 **1) Download .jar file ```libs``` folder**
 
-1. Download [`OneSkyScreenshotHelper-v0.5.2.jar`](https://github.com/onesky/auto-screenshot-android/releases/download/v0.5.2/OneSkyScreenshotHelper-v0.5.2.jar) in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
+1. Download [`OneSkyScreenshotHelper-v0.5.3.jar`](https://github.com/onesky/auto-screenshot-android/releases/download/v0.5.3/OneSkyScreenshotHelper-v0.5.3.jar) in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
 2. On Eclipse you are good to go.
 3. On Android Studio, locate the ```build.gradle``` file under your app's module and add the following:
 
 ```java
 	dependencies {
-		compile files("OneSkyScreenshotHelper-v0.5.2.jar")
+		compile files("OneSkyScreenshotHelper-v0.5.3.jar")
 	}
 ```
 
@@ -28,7 +28,7 @@ Add the follow code to your ```pom.xml```
 		<dependency>
 			<groupId>com.oneskyapp</groupId>
 			<artifactId>screenshot</artifactId>
-			<version>0.5.2</version>
+			<version>0.5.3</version>
         </dependency>
 	</dependencies>
 	
@@ -54,7 +54,7 @@ Add the follow code to your ```build.gradle```
 	
 	dependencies {
 		// other dependencies.
-	    compile "com.oneskyapp:screenshot:0.5.2"
+	    compile "com.oneskyapp:screenshot:0.5.3"
 	}
 ```
 
