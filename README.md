@@ -10,13 +10,13 @@ Installation
 
 **1) Download .jar file ```libs``` folder**
 
-1. Download [`OneSkyScreenshotHelper-v0.5.5.jar`](https://github.com/onesky/auto-screenshot-android/releases/download/v0.5.5/OneSkyScreenshotHelper-v0.5.5.jar) in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
+1. Download [`OneSkyScreenshotHelper-v0.6.0.jar`](https://github.com/onesky/auto-screenshot-android/releases/download/v0.6.0/OneSkyScreenshotHelper-v0.6.0.jar) in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
 2. On Eclipse you are good to go.
 3. On Android Studio, locate the ```build.gradle``` file under your app's module and add the following:
 
 ```java
 	dependencies {
-		compile files("OneSkyScreenshotHelper-v0.5.5.jar")
+		compile files("OneSkyScreenshotHelper-v0.6.0.jar")
 	}
 ```
 
@@ -28,7 +28,7 @@ Add the follow code to your ```pom.xml```
 		<dependency>
 			<groupId>com.oneskyapp</groupId>
 			<artifactId>screenshot</artifactId>
-			<version>0.5.5</version>
+			<version>0.6.0</version>
         </dependency>
 	</dependencies>
 	
@@ -54,7 +54,7 @@ Add the follow code to your ```build.gradle```
 	
 	dependencies {
 		// other dependencies.
-	    compile "com.oneskyapp:screenshot:0.5.5"
+	    compile "com.oneskyapp:screenshot:0.6.0"
 	}
 ```
 
@@ -94,6 +94,17 @@ The default position of the screenshot button is bottom right of the main window
 ```java
 OneSkyScreenshotHelper.getHelper().setCatpureButtonGravity(Gravity.TOP | Gravity.LEFT);
 ```
+
+Turn on/off debug messages in your logs.
+```java
+OneSkyScreenshotHelper.getHelper().setDebug(true);
+```
+
+By default the helper looks for string resources of your app using DexFile and Reflection automatically. If you  experience trouble getting the helper to load the string resources, you can provide specific string resource classes.
+```java
+OneSkyScreenshotHelper.getHelper().setResourceClasses(R.string, R.array);
+```
+
 
 Support
 -------

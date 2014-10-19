@@ -62,11 +62,7 @@ public class MainActivity extends FragmentActivity {
 	        mListView.setAdapter(adapter);
 	        
 	        TextView formatView = (TextView)view.findViewById(R.id.test_format);
-	        formatView.setText(getString(R.string.test_format, 123f, "format", 12, false));
-	        
-	        TextView nonLocalizableFormatView = (TextView)view.findViewById(R.id.non_localizable_format);
-	        String nonLocalizableFormat = "xfloat = %1$.1f\nnew line = \nxstring = %2$s\nint = %3$d\nboolean = %4$B";        
-	        nonLocalizableFormatView.setText(String.format(nonLocalizableFormat, 123f, "format", 12, false));
+	        formatView.setText(getString(R.string.test_format, 1231223f, "format", 12, false));
 	        
 	        mListView.setOnItemClickListener(new OnItemClickListener(){
 
