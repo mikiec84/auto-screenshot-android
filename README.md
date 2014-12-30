@@ -10,13 +10,13 @@ Installation
 
 **1) Download .jar file ```libs``` folder**
 
-1. Download [`OneSkyScreenshotHelper-v0.6.0.jar`](https://github.com/onesky/auto-screenshot-android/releases/download/v0.6.0/OneSkyScreenshotHelper-v0.6.0.jar) in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
+1. Download [`OneSkyScreenshotHelper-v0.6.2.jar`](https://github.com/onesky/auto-screenshot-android/releases/download/v0.6.0/OneSkyScreenshotHelper-v0.6.0.jar) in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
 2. On Eclipse you are good to go.
 3. On Android Studio, locate the ```build.gradle``` file under your app's module and add the following:
 
 ```java
 	dependencies {
-		compile files("OneSkyScreenshotHelper-v0.6.0.jar")
+		compile files("OneSkyScreenshotHelper-v0.6.2.jar")
 	}
 ```
 
@@ -28,17 +28,17 @@ Add the follow code to your ```pom.xml```
 		<dependency>
 			<groupId>com.oneskyapp</groupId>
 			<artifactId>screenshot</artifactId>
-			<version>0.6.0</version>
+			<version>0.6.2</version>
         </dependency>
 	</dependencies>
-	
+
 	<repositories>
 		<repository>
 		    <id>screenshot</id>
 			<name>OneSkyScreenshotHelper</name>
 			<url>https://raw.github.com/onesky/auto-screenshot-android/mvn-repo/</url>
 		</repository>
-	</repositories>	
+	</repositories>
 ```
 
 **3) Android Studio/Gradle**
@@ -51,10 +51,10 @@ Add the follow code to your ```build.gradle```
         	url "https://raw.github.com/onesky/auto-screenshot-android/mvn-repo/"
     	}
 	}
-	
+
 	dependencies {
 		// other dependencies.
-	    compile "com.oneskyapp:screenshot:0.6.0"
+	    compile "com.oneskyapp:screenshot:0.6.2"
 	}
 ```
 
@@ -73,11 +73,11 @@ Add the following code in under ```onCreate()```:
 OneSkyScreenshotHelper.getHelper().setApiKey("ONESKY_API_KEY");
 OneSkyScreenshotHelper.getHelper().setApiSecret("ONESKY_API_SECRET");
 OneSkyScreenshotHelper.getHelper().setProjectId("ONESKY_PROJECT_ID");
-	
+
 OneSkyScreenshotHelper.getHelper().startCapturing(this); // for Activity subclasses, use startCapturing(this.getApplication())
 ```
 
-```ONESKY_API_KEY```, ```ONESKY_API_SECRET``` can be found in **Site Settings** under **API Keys & Usage** on **OneSky Web Admin**. 
+```ONESKY_API_KEY```, ```ONESKY_API_SECRET``` can be found in **Site Settings** under **API Keys & Usage** on **OneSky Web Admin**.
 ```ONESKY_PROJECT_ID``` can be found under **All Projects** page.
 
 **NOTE:** The above parameters must be set before calling ```startCapturing()```.
