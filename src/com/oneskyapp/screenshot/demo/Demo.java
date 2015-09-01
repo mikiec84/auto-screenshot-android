@@ -1,9 +1,8 @@
 package com.oneskyapp.screenshot.demo;
 
-import com.oneskyapp.screenshot.OneSkyScreenshotHelper;
-
 import android.app.Application;
-import android.view.Gravity;
+
+import com.oneskyapp.screenshot.OneSkyScreenshotHelper;
 
 public class Demo extends Application {
 
@@ -14,7 +13,6 @@ public class Demo extends Application {
 		OneSkyScreenshotHelper.getHelper().setApiSecret("YOUR API SECRET");
 		OneSkyScreenshotHelper.getHelper().setProjectId("YOUR PROJECT ID");
 		
-		OneSkyScreenshotHelper.getHelper().setCaptureButtonGravity(Gravity.LEFT | Gravity.BOTTOM);
 		OneSkyScreenshotHelper.getHelper().startCapturing(this);
 	}
 }

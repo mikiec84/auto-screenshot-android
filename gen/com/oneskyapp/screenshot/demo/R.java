@@ -29,11 +29,12 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090004;
-        public static final int html_test=0x7f090001;
-        public static final int list_view=0x7f090002;
-        public static final int test_format=0x7f090000;
-        public static final int web_view=0x7f090003;
+        public static final int action_settings=0x7f090005;
+        public static final int button=0x7f090000;
+        public static final int list_view=0x7f090003;
+        public static final int non_localizable_format=0x7f090002;
+        public static final int test_format=0x7f090001;
+        public static final int web_view=0x7f090004;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -47,9 +48,14 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int array=0x7f050008;
         public static final int button=0x7f050004;
+        public static final int cancel=0x7f05000c;
+        /**  Dialog 
+         */
+        public static final int dialog_message=0x7f05000a;
         public static final int edit_text=0x7f050005;
         public static final int hello_world=0x7f050002;
         public static final int html_test=0x7f050009;
+        public static final int okay=0x7f05000b;
         public static final int regex=0x7f050007;
         public static final int test_format=0x7f050006;
         public static final int text_view=0x7f050003;

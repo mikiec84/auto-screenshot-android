@@ -1,17 +1,23 @@
 package com.oneskyapp.screenshot.demo;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -66,14 +72,40 @@ public class MainActivity extends FragmentActivity {
 	        
 	        mListView.setOnItemClickListener(new OnItemClickListener(){
 
-				@Override
-				public void onItemClick(AdapterView<?> arg0, View arg1,
-						int arg2, long arg3) {
-					
+				public void onItemClick(AdapterView<?> listView, View view,
+						int position, long id) {					
 					Intent i = new Intent(getActivity(), MainActivity.class);
 					startActivity(i);
-				}	        	
+				}
+	        });
+	        
+	        Button button = (Button) view.findViewById(R.id.button);
+	        button.setOnClickListener(new OnClickListener() {
+
+				public void onClick(View view) {
+					TestDialogFragment dialog = new TestDialogFragment();
+					dialog.show(getFragmentManager(), "TestDialog");
+				}
 	        });
 		}
+	}
+	
+	public static class TestDialogFragment extends DialogFragment {
+	    @Override
+	    public Dialog onCreateDialog(Bundle savedInstanceState) {
+	        // Use the Builder class for convenient dialog construction
+	        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+	        builder.setMessage(R.string.dialog_message)
+	               .setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
+	                   public void onClick(DialogInterface dialog, int id) {
+	                   }
+	               })
+	               .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+	                   public void onClick(DialogInterface dialog, int id) {
+	                   }
+	               });
+	        // Create the AlertDialog object and return it
+	        return builder.create();
+	    }
 	}
 }
