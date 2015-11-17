@@ -18,7 +18,7 @@ Add the follow code to your ```build.gradle```
 ```java
 	dependencies {
 		// other dependencies.
-	    compile "com.oneskyapp:screenshot:0.7.1"
+	    compile "com.oneskyapp:screenshot:0.7.2"
 	}
 ```
 
@@ -30,20 +30,20 @@ Add the follow code to your ```pom.xml```
 		<dependency>
 			<groupId>com.oneskyapp</groupId>
 			<artifactId>screenshot</artifactId>
-			<version>0.7.1</version>
+			<version>0.7.2</version>
         </dependency>
 	</dependencies>
 ```
 
 **Download .jar file to ```libs``` folder**
 
-1. Download [`OneSkyScreenshotHelper-v0.7.1.jar`](https://github.com/onesky/auto-screenshot-android/releases/download/v0.7.1/OneSkyScreenshotHelper-v0.7.1.jar) in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
+1. Download [`OneSkyScreenshotHelper-v0.7.2.jar`](https://github.com/onesky/auto-screenshot-android/releases/download/v0.7.2/OneSkyScreenshotHelper-v0.7.2.jar) in the release tab in this GitHub page and drag it into the ```libs``` folder of your project.
 2. On Eclipse you are good to go.
 3. On Android Studio, locate the ```build.gradle``` file under your app's module and add the following:
 
 ```java
 	dependencies {
-		compile files("OneSkyScreenshotHelper-v0.7.1.jar")
+		compile files("OneSkyScreenshotHelper-v0.7.2.jar")
 	}
 ```
 
@@ -57,14 +57,12 @@ The screenshot button now (from `v0.7.0`) lives on a separate `Bound Service` so
 <manifest>
 	<!-- Internet permission for uploading screenshots to OneSky server -->
 	<uses-permission android:name="android.permission.INTERNET"/>
-	<!-- Alert window permission for screenshot button -->
-	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-	
+
 	<application>
 		<!-- declare service for screenshot button -->
 		<service android:name="com.oneskyapp.screenshot.ScreenshotButtonService" />
 	</application>
-	
+
 </manifest>
 ```
 
