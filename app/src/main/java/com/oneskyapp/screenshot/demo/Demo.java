@@ -13,6 +13,6 @@ public class Demo extends Application {
 		OneSkyScreenshotHelper.getHelper().setApiSecret("YOUR API SECRET");
 		OneSkyScreenshotHelper.getHelper().setProjectId("YOUR PROJECT ID");
 
-		OneSkyScreenshotHelper.getHelper().startCapturing(this);
+		OneSkyScreenshotHelper.getHelper().startCapturing(this, R.string.class, R.array.class);
 	}
 }
