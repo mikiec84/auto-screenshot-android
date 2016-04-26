@@ -2,23 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.oneskyapp.screenshot.demo"
     android:versionCode="39"
-    android:versionName="0.7.4" >
+    android:versionName="0.7.4">
 
-    <uses-sdk
-        android:minSdkVersion="10"
-        android:targetSdkVersion="23" />
-        
 	<uses-permission android:name="android.permission.INTERNET"/>
-	
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:name="Demo"
         android:theme="@style/AppTheme" >
-        
-		<service android:name="com.oneskyapp.screenshot.ScreenshotButtonService" />
-		
         <activity
             android:name="com.oneskyapp.screenshot.demo.MainActivity"
             android:label="@string/app_name" >
@@ -28,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+	
+        <!-- declare service for screenshot button -->
+        <service android:name="com.oneskyapp.screenshot.ScreenshotButtonService" />
     </application>
-
+    
 </manifest>

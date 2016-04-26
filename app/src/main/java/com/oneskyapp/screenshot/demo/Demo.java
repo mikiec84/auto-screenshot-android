@@ -8,11 +8,11 @@ public class Demo extends Application {
 
 	@Override
 	public void onCreate(){		
-		
+		super.onCreate();
 		OneSkyScreenshotHelper.getHelper().setApiKey("YOUR API KEY");
 		OneSkyScreenshotHelper.getHelper().setApiSecret("YOUR API SECRET");
 		OneSkyScreenshotHelper.getHelper().setProjectId("YOUR PROJECT ID");
-		
+
 		OneSkyScreenshotHelper.getHelper().startCapturing(this);
 	}
 }
