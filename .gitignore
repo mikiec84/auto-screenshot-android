@@ -36,8 +36,10 @@ proguard/
 Thumbs.db
 
 # Intellij IDEA (see https://intellij-support.jetbrains.com/entries/23393067)
+*.iml
 *.iws
 .idea/libraries
 .idea/tasks.xml
 .idea/vcs.xml
 .idea/workspace.xml
+.idea/misc.xml
