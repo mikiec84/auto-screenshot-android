@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    compile 'com.oneskyapp:screenshot:0.7.5'
+    compile 'com.oneskyapp:screenshot:0.7.6'
     compile 'com.android.support:support-v4:23.3.0'
 }
